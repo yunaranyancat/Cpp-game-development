@@ -6,7 +6,7 @@ I have watched the first Chili tutorial on Youtube and I find it very useful and
 
 Tutorial 0 : Modfied Game.cpp in the Framework
 
-Ressources
+Resources
 Playlist on Youtube: https://www.youtube.com/watch?v=PwuIEMUFUnQ&list=PLqCJpWy5FohcehaXlCIt8sVBHBFFRVWsx
 
 Incoming updates on README...

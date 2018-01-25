@@ -41,6 +41,20 @@ void Game::UpdateModel()
 }
 
 void Game::ComposeFrame()
-{
-	gfx.PutPixel(100, 100, 255, 255, 255);
+{//800x600 frame
+	int x = 350;
+	int y = 200;
+	gfx.PutPixel(395+x, 300+y, 255, 255, 255);
+	gfx.PutPixel(396+x, 300+y, 255, 255, 255);
+	gfx.PutPixel(397+x, 300+y, 255, 255, 255);
+	gfx.PutPixel(403+x, 300+y, 255, 255, 255);
+	gfx.PutPixel(404+x, 300+y, 255, 255, 255);
+	gfx.PutPixel(405+x, 300+y, 255, 255, 255);
+	gfx.PutPixel(400+x, 295+y, 255, 255, 255);
+	gfx.PutPixel(400+x, 296+y, 255, 255, 255);
+	gfx.PutPixel(400+x, 297+y, 255, 255, 255);
+	gfx.PutPixel(400+x, 303+y, 255, 255, 255);
+	gfx.PutPixel(400+x, 304+y, 255, 255, 255);
+	gfx.PutPixel(400+x, 305+y, 255, 255, 255);
 }
+
