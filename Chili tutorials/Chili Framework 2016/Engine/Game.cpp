@@ -41,20 +41,22 @@ void Game::UpdateModel()
 }
 
 void Game::ComposeFrame()
-{//800x600 frame
-	int x = 350;
-	int y = 200;
-	gfx.PutPixel(395+x, 300+y, 255, 255, 255);
-	gfx.PutPixel(396+x, 300+y, 255, 255, 255);
-	gfx.PutPixel(397+x, 300+y, 255, 255, 255);
-	gfx.PutPixel(403+x, 300+y, 255, 255, 255);
-	gfx.PutPixel(404+x, 300+y, 255, 255, 255);
-	gfx.PutPixel(405+x, 300+y, 255, 255, 255);
-	gfx.PutPixel(400+x, 295+y, 255, 255, 255);
-	gfx.PutPixel(400+x, 296+y, 255, 255, 255);
-	gfx.PutPixel(400+x, 297+y, 255, 255, 255);
-	gfx.PutPixel(400+x, 303+y, 255, 255, 255);
-	gfx.PutPixel(400+x, 304+y, 255, 255, 255);
-	gfx.PutPixel(400+x, 305+y, 255, 255, 255);
+{
+	const int x_base = 400;
+	const int y_base = 300;
+	const int max_light = 255;
+
+	gfx.PutPixel(x_base-5, y_base, max_light, 255, 255);
+	gfx.PutPixel(x_base-4, y_base, 255, 255, 255);
+	gfx.PutPixel(x_base-3, y_base, 255, 255, 255);
+	gfx.PutPixel(x_base+5, y_base, 255, 255, 255);
+	gfx.PutPixel(x_base+4, y_base, 255, 255, 255);
+	gfx.PutPixel(x_base+5, y_base, 255, 255, 255);
+	gfx.PutPixel(x_base, y_base-5, 255, 255, 255);
+	gfx.PutPixel(x_base, y_base-4, 255, 255, 255);
+	gfx.PutPixel(x_base, y_base-3, 255, 255, 255);
+	gfx.PutPixel(x_base, y_base+3, 255, 255, 255);
+	gfx.PutPixel(x_base, y_base+4, 255, 255, 255);
+	gfx.PutPixel(x_base, y_base+5, 255, 255, 255);
 }
 
