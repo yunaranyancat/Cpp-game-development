@@ -46,17 +46,42 @@ void Game::ComposeFrame()
 	const int y_base = 300;
 	const int max_light = 255;
 
-	gfx.PutPixel(x_base-5, y_base, max_light, 255, 255);
-	gfx.PutPixel(x_base-4, y_base, 255, 255, 255);
-	gfx.PutPixel(x_base-3, y_base, 255, 255, 255);
-	gfx.PutPixel(x_base+5, y_base, 255, 255, 255);
-	gfx.PutPixel(x_base+4, y_base, 255, 255, 255);
-	gfx.PutPixel(x_base+5, y_base, 255, 255, 255);
-	gfx.PutPixel(x_base, y_base-5, 255, 255, 255);
-	gfx.PutPixel(x_base, y_base-4, 255, 255, 255);
-	gfx.PutPixel(x_base, y_base-3, 255, 255, 255);
-	gfx.PutPixel(x_base, y_base+3, 255, 255, 255);
-	gfx.PutPixel(x_base, y_base+4, 255, 255, 255);
-	gfx.PutPixel(x_base, y_base+5, 255, 255, 255);
+	const bool cond = wnd.kbd.KeyIsPressed(VK_UP); //windows.keyboard.keypressed.UP
+
+	if (cond)
+	{
+		if (wnd.kbd.KeyIsPressed(VK_DOWN)) {
+			gfx.PutPixel(-5 + x_base, y_base, max_light, 255, 255);
+			gfx.PutPixel(-4 + x_base, y_base, 255, 255, 255);
+			gfx.PutPixel(-3 + x_base, y_base, 255, 255, 255);
+			gfx.PutPixel(5 + x_base, y_base, 255, 255, 255);
+			gfx.PutPixel(4 + x_base, y_base, 255, 255, 255);
+			gfx.PutPixel(5 + x_base, y_base, 255, 255, 255);
+			gfx.PutPixel(x_base, -5 + y_base, 255, 255, 255);
+			gfx.PutPixel(x_base, -4 + y_base, 255, 255, 255);
+			gfx.PutPixel(x_base, -3 + y_base, 255, 255, 255);
+			gfx.PutPixel(x_base, +3 + y_base, 255, 255, 255);
+			gfx.PutPixel(x_base, +4 + y_base, 255, 255, 255);
+			gfx.PutPixel(x_base, +5 + y_base, 255, 255, 255);
+		}
+	}
+	else if( wnd.kbd.KeyIsPressed(VK_DOWN) )
+	{
+		gfx.PutPixel(-5 + x_base, y_base, max_light, 0, 255);
+		gfx.PutPixel(-4 + x_base, y_base, 255, 0, 255);
+		gfx.PutPixel(-3 + x_base, y_base, 255, 0, 255);
+		gfx.PutPixel(5 + x_base, y_base, 255, 0, 255);
+		gfx.PutPixel(4 + x_base, y_base, 255, 0, 255);
+		gfx.PutPixel(5 + x_base, y_base, 255, 0, 255);
+		gfx.PutPixel(x_base, -5 + y_base, 255, 0, 255);
+		gfx.PutPixel(x_base, -4 + y_base, 255, 0, 255);
+		gfx.PutPixel(x_base, -3 + y_base, 255, 0, 255);
+		gfx.PutPixel(x_base, +3 + y_base, 255, 0, 255);
+		gfx.PutPixel(x_base, +4 + y_base, 255, 0, 255);
+		gfx.PutPixel(x_base, +5 + y_base, 255, 0, 255);
+	}
+	else {}
+
+
 }
 
